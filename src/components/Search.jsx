@@ -122,13 +122,13 @@ const Wrapper = styled.div`
     button {
       font-size: 1rem;
     }
-    // @media (max-width: 800px) {
-    //   button,
-    //   input,
-    //   svg {
-    //     font-size: 0.85rem;
-    //   }
-    // }
+    @media (max-width: 800px) {
+      button,
+      input,
+      svg {
+        font-size: 0.85rem;
+      }
+    }
   }
 `;
 const ErrorWrapper = styled.article`
