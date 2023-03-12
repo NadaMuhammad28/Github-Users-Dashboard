@@ -24,6 +24,8 @@ const assets = [
   "/node_modules/.vite/deps/chunk-BUFZAJGW.js?v=9f8cfaf8",
   "/node_modules/.vite/deps/chunk-DFKQJ226.js?v=9f8cfaf8",
   "/node_modules/.vite/deps/chunk-ZOIWZPCO.js?v=9f8cfaf8",
+  "/assets/index-7be0a65b.js",
+  "/assets/index-f4b45e5f.css",
 ];
 
 // '/' --> the root url
