@@ -125,8 +125,8 @@ const Wrapper = styled.section`
     column-gap: 1rem;
     margin-bottom: 1rem;
     img {
-      width: 75px;
-      height: 75px;
+      width: 65px;
+      height: 65px;
       border-radius: 50%;
     }
     h4 {

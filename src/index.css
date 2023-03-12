@@ -180,9 +180,14 @@ input {
   margin: 0 auto;
   max-width: 1170px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 500px) {
   .section-center {
     width: 95vw;
+  }
+}
+@media screen and (max-width: 350px) {
+  .section-center {
+    width: 97vw;
   }
 }
 .loading-img {
