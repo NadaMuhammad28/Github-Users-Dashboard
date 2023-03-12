@@ -18,7 +18,7 @@ const GlobalContext = ({ children }) => {
     mostForkedRepos: [],
     isSearchDisabled: false,
     limit: 60,
-    usedReqs: 0,
+    usedReqs: JSON.parse(localStorage.getItem("usedReqs")) || 0,
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -29,6 +29,7 @@ const GlobalContext = ({ children }) => {
       const { data } = await axios.get(`${rootEndPoint}rate_limit`);
       const { limit, used, remaining } = data.rate;
       dispatch({ type: "CHECK_REQUESTS_LIMIT", payload: { limit, used } });
+      localStorage.setItem("usedReqs", JSON.stringify(used));
       if (!remaining) dispatch({ type: "DISABLE_SEARCH" });
     } catch (e) {}
   };
