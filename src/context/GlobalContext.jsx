@@ -88,11 +88,8 @@ const GlobalContext = ({ children }) => {
 
       //followers
       const followers = await fetchFollowers(user);
-
       //rate limit
-
       checkRequest();
-
       //user profile . repos, followers
       dispatch({
         type: "SET_DATA",

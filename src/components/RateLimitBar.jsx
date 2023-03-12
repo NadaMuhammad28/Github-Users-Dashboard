@@ -7,7 +7,6 @@ const RateLimit = () => {
   return (
     <Wrapper className="section-center">
       <span>
-        {" "}
         {remaining === 0 ? "Hourly Limit is exceeded" : "Hourly Limit"}{" "}
       </span>
       <div className="progress" style={{ width: `${width}%`, height: "100%" }}>
