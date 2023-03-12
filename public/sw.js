@@ -12,6 +12,9 @@ const assets = [
   "https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap",
   "https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2",
   "/icons/144.png",
+  "/src/assets/avatar.png",
+  "/src/pages/Error.jsx",
+  "/src/index.css",
 ];
 
 // '/' --> the root url
