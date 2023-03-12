@@ -19,7 +19,6 @@ const MostStarredChart = ({ data }) => {
     dataSource: {
       chart: {
         caption: "Most Popular",
-        subCaption: "Most Starred Repos",
         yAxisName: "Stars",
         yAxisNameFontSize: 16,
         xAxisName: "Repos",
@@ -29,9 +28,9 @@ const MostStarredChart = ({ data }) => {
         usePlotGradientColor: 0,
         valueFontSize: 16,
         placeValuesInside: 0,
-        divLineColor: "#102a42",
+        divLineColor: "#5664b3",
         divLineAlpha: 15,
-        captionFontColor: "#102a42",
+        captionFontColor: "#f1f5f8",
         captionFontBold: 0,
         captionFontSize: 20,
         captionFont: "Roboto",
@@ -40,8 +39,11 @@ const MostStarredChart = ({ data }) => {
         baseFontColor: "#617d98",
         smartLineColor: "#617d98",
         showHoverEffect: true,
+        labelFontColor: " #bfdfff",
         showShadow: 0,
         showPlotBorder: 0,
+        legenditemfontcolor: "#bfdfff",
+
         paletteColors:
           "#2caeba, #5D62B5, #FFC533, #F2726F, #8d6e63, #1de9b6, #6E80CA, #202546",
         bgColor: "#202546",

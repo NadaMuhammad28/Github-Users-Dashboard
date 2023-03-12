@@ -4,7 +4,6 @@ import { Route, Routes } from "react-router";
 import { Error, Dashboard } from "./pages/index";
 import OfflineMode from "./components/OfflineMode";
 function App() {
-  console.log(navigator.onLine);
   return (
     <div className="App">
       {!navigator.onLine && <OfflineMode />}

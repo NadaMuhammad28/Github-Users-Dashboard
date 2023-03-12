@@ -15,7 +15,7 @@ const MostForkedChart = ({ data }) => {
   const chartConfigs = {
     type: "bar2d", // The chart type
     width: "100%", // Width of the chart
-    height: "400", // Height of the chart
+    height: 400, // Height of the chart
     dataFormat: "json", // Data type
     dataSource: {
       // Chart Configuration
@@ -25,6 +25,9 @@ const MostForkedChart = ({ data }) => {
         xAxisName: "Repos",
         xAxisNameFontSize: 16,
         yAxisNameFontSize: 16,
+        captionFontColor: "#f1f5f8",
+        labelFontColor: " #bfdfff",
+
         showCanvasBorder: 0,
         showAlternateVGridColor: 0,
         usePlotGradientColor: 0,
@@ -32,7 +35,6 @@ const MostForkedChart = ({ data }) => {
         placeValuesInside: 0,
         divLineColor: "#102a42",
         divLineAlpha: 15,
-        captionFontColor: "#102a42",
         captionFontBold: 0,
         captionFontSize: 20,
         captionFont: "Roboto",
@@ -48,6 +50,7 @@ const MostForkedChart = ({ data }) => {
         bgAlpha: "100",
         showBorder: 0,
         theme: "fusion",
+        legenditemfontcolor: "#bfdfff",
       },
       data,
     },

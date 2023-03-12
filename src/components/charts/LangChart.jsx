@@ -12,8 +12,13 @@ const LangChart = ({ data }) => {
     dataSource: {
       chart: {
         caption: "Languages",
+        captionFontColor: "#f1f5f8",
+        labelFontColor: " #bfdfff",
         decimals: 1,
+        bgColor: "#202546",
+        bgAlpha: "100",
         theme: "fusion",
+        legenditemfontcolor: "#bfdfff",
       },
       data,
     },
