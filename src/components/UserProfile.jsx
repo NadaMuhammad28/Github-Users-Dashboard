@@ -151,7 +151,7 @@ const Wrapper = styled.section`
     }
   }
   .bio {
-    color: var(--clr-grey-3);
+    color: var(--clr-grey-7);
   }
   .links {
     p,
@@ -171,9 +171,12 @@ const Wrapper = styled.section`
         color: var(--clr-grey-5);
       }
       &:hover {
-        color: var(--clr-primary-3);
+        color: var(--clr-white);
       }
     }
+  }
+  a > p:hover {
+    color: #fff !important;
   }
 `;
 export default UserProfile;

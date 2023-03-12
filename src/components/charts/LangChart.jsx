@@ -13,7 +13,7 @@ const LangChart = ({ data }) => {
       chart: {
         caption: "Languages",
         captionFontColor: "#f1f5f8",
-        labelFontColor: " #bfdfff",
+        labelFontColor: "#bfdfff",
         decimals: 1,
         bgColor: "#202546",
         bgAlpha: "100",

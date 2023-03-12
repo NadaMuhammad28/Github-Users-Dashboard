@@ -12,51 +12,38 @@ const ChartsWrapper = () => {
   return (
     <section className="section">
       <Wrapper className="section-center">
-        <div className="chart-wrapper-1">
-          <div className="chart-content">
-            <LangChart data={languagesFreq} />
-          </div>
-          <div className="chart-content">
-            <MostStarredChart data={mostStarredRpos} />
-          </div>
-        </div>
-
-        <div className="chart-wrapper-2">
-          <div className="chart-content">
-            <StarPerLangChart data={starsPerLangs} />
-          </div>
-          <div className="chart-content">
-            <MostForkedChart data={mostForkedRepos} />
-          </div>
-        </div>
+        <LangChart data={languagesFreq} />
+        <MostStarredChart data={mostStarredRpos} />
+        <StarPerLangChart data={starsPerLangs} />
+        <MostForkedChart data={mostForkedRepos} />
       </Wrapper>
     </section>
   );
 };
 
 const Wrapper = styled.div`
-  display: flex;
+  display: grid;
+  // justify-items: center;
   gap: 2rem;
-  flex-direction: column;
-  .chart-wrapper-1,
-  .chart-wrapper-2 {
-    width: 100%;
-    display: flex;
-    gap: 2rem;
-    border-radius: var(--radius);
-    .chart-content {
-      flex-shrink: 1;
-      flex-basis: 48%;
-    }
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 1fr;
   }
-  @media (max-width: 820px) {
-    .chart-wrapper-1,
-    .chart-wrapper-2 {
-      flex-direction: column;
-      .chart-content {
-        flex-basis: 100%;
-      }
-    }
+  @media (min-width: 1200px) {
+    grid-template-columns: 3fr 3fr;
+  }
+  div {
+    background: var(--clr-primary-11);
+    width: 100% !important;
+  }
+  .fusioncharts-container {
+    width: 100% !important;
+    background: var(--clr-primary-11);
+  }
+  svg {
+    background: var(--clr-primary-11) !important;
+
+    width: 100% !important;
+    border-radius: var(--radius) !important;
   }
 `;
 export default ChartsWrapper;

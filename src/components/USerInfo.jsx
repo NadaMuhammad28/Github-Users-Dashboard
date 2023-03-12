@@ -90,6 +90,7 @@ const Wrapper = styled.section`
     p {
       margin-bottom: 0;
       text-align: center;
+      color: #bfdfff;
 
       text-transform: capitalize;
     }

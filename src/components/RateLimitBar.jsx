@@ -27,9 +27,12 @@ const Wrapper = styled.header`
     top: 1rem;
     right: 0;
     font-size: 0.9rem;
+    color: #bfdfff;
   }
   .progress {
     text-align: right;
+    color: #bfdfff;
+
     background-color: var(--clr-primary-5);
     transition: ease-in-out 0.6s width;
     font-size: 0.7rem;
