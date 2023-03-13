@@ -21,8 +21,8 @@ const assets = [
   // "/src/context/GlobalContext.jsx?t=1678588179421",
   // "/src/App.jsx?t=1678588179421",
   // "/src/swDev.js",
-  // "/assets/index.js",
-  // "/assets/index.css",
+  "/assets/index.js",
+  "/assets/index.css",
 ];
 
 
