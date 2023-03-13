@@ -2,11 +2,9 @@
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router";
 import { Error, Dashboard } from "./pages/index";
-import OfflineMode from "./components/OfflineMode";
 function App() {
   return (
     <div className="App">
-      {!navigator.onLine && <OfflineMode />}
       <BrowserRouter>
         <Routes>
           <Route path="" element={<Dashboard />} />
