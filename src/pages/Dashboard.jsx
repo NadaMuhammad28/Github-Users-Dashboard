@@ -4,10 +4,14 @@ import Search from "../components/Search";
 import Loader from "../components/Loader";
 import UserStatistics from "./UserStatistics";
 import RateLimit from "../components/RateLimitBar";
+import OfflineMode from "../components/OfflineMode";
+
 const Dashboard = () => {
   const { isLoading } = useGlobalContext();
   return (
     <Main>
+            {!navigator.onLine && <OfflineMode />}
+
       <Search />
       <RateLimit />
       {isLoading ? <Loader /> : <UserStatistics />}
