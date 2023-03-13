@@ -32,9 +32,9 @@ const UserProfile = () => {
         <img src={avatar_url || avatar} alt={login} />
         <div>
           <h4>{name || login}</h4>
-          <p>{login}</p>
+          <p className="username">{login}</p>
         </div>
-        <Link to={html_url} target="_blank">
+        <Link to={html_url} target="_blank" className="follow">
           Follow
         </Link>
       </header>
@@ -121,6 +121,7 @@ const Wrapper = styled.section`
   header {
     display: grid;
     grid-template-columns: auto 1fr auto;
+    // grid-template-rows:1fr 1fr 1fr; 
     align-items: center;
     column-gap: 1rem;
     margin-bottom: 1rem;
@@ -151,19 +152,22 @@ const Wrapper = styled.section`
     }
   }
 
-  @media (max-width:372px){
+
+
+  @media (max-width:376px){
     header{
-      grid-template-columns: auto 1fr ;
-    grid-template-rows: auto auto;
-    row-gap:1rem;
+
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    gap:1rem;
+    justify-content:center;
     }
     .follow{
-      align-self: flex-end;
-      float:right;
       text-align:right;
 
- 
     }
+    h4,.username{text-align:center;}
   }
   .bio {
     color: var(--clr-grey-7);
