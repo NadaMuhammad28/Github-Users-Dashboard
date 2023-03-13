@@ -4,7 +4,7 @@ export default function sw() {
     //register sw
     navigator.serviceWorker
       .register("/sw.js")
-      .then((res) => console.log("res", res))
+      .then((res) => res)
       .catch((e) => console.log("error", e.message));
   }
 }
