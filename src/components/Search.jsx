@@ -130,6 +130,31 @@ const Wrapper = styled.div`
       }
     }
   }
+  @media (max-width: 333px){
+      .from-control{
+        grid-template-columns: auto .6fr auto;
+
+      }
+      button {    
+          padding: 0.12rem 0.15rem;
+      }
+    }
+  }
+
+  @media (max-width: 322px){
+    .from-control{
+      grid-template-columns: 1fr auto;
+
+    }
+ svg{
+  display:none;
+ }
+ button{
+  padding: 0.25rem 0.5rem;
+
+ }
+  }
+}
 `;
 const ErrorWrapper = styled.article`
   text-transform: capitalize;
