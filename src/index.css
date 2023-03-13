@@ -198,14 +198,9 @@ align-items: stretch !important;
 #search-btn{
 width: 40% !important;
 align-self: center;
+padding: 0.12rem 0.15rem;
 }
-   svg{
-    display:none;
-   }
-   button{
-    padding: 0.12rem 0.15rem;
-   }
-    
+
   }
 @media (max-width: 500px) {
   .section-center {
