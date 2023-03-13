@@ -48,12 +48,12 @@ self.addEventListener("activate", (ev) => {
     //promise.all-> arry of promises , returns a ptomise when all promises are resolved
     //return array of cache keys
     caches.keys().then((keys) => {
-       Promise.all(
+       return Promise.all(
         keys
           .filter((key) => key !== stiaticCacheName)
           .map((key) => caches.delete(key))
           );
-          return window.location.reload()
+//           return window.location.reload()
       
     })
   );
