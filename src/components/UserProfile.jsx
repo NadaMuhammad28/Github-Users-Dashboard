@@ -150,6 +150,21 @@ const Wrapper = styled.section`
       }
     }
   }
+
+  @media (max-width:372px){
+    header{
+      grid-template-columns: auto 1fr ;
+    grid-template-rows: auto auto;
+    row-gap:1rem;
+    }
+    .follow{
+      align-self: flex-end;
+      float:right;
+      text-align:right;
+
+ 
+    }
+  }
   .bio {
     color: var(--clr-grey-7);
   }
