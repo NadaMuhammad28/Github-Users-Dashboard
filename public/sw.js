@@ -13,7 +13,7 @@ const assets = [
   "https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap",
   "https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2",
 
-  // "/src/assets/avatar.png",
+  "/src/assets/avatar.png",
   // "/src/pages/Error.jsx",
   // "/src/index.css?t=1678579457290",
   // "/src/pages/Dashboard.jsx",
@@ -48,25 +48,31 @@ self.addEventListener("activate", (ev) => {
     //promise.all-> arry of promises , returns a ptomise when all promises are resolved
     //return array of cache keys
     caches.keys().then((keys) => {
-      return Promise.all(
+       Promise.all(
         keys
           .filter((key) => key !== stiaticCacheName)
           .map((key) => caches.delete(key))
-      );
+          );
+          return window.location.reload()
+      
     })
   );
 });
-console.log(self);
 
 self.addEventListener("fetch", (ev) => {
   // console.log("fetch", ev);
 
   ev.respondWith(
     caches.match(ev.request).then((resp) => {
-      if (resp) return resp;
+      if(!navigator.onLine){
+
+        if (resp) return resp;
+      }
       else {
         return fetch(ev.request);
       }
     })
   );
+});
+
 });
