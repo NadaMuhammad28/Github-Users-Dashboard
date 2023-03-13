@@ -155,6 +155,8 @@ const Wrapper = styled.section`
 
 
   @media (max-width:376px){
+        max-height:500px;
+
     header{
 
     display:flex;
