@@ -2,6 +2,7 @@
 const stiaticCacheName = "site_cache-v1";
 //array of static files
 
+
 const assets = [
   "/",
   "/index.html",
@@ -11,22 +12,19 @@ const assets = [
   "https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2",
   "https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap",
   "https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2",
-  "/icons/144.png",
-  "/src/assets/avatar.png",
-  "/src/pages/Error.jsx",
-  "/src/index.css?t=1678579457290",
-  "/src/pages/Dashboard.jsx",
-  "/src/main.jsx?t=1678588179421",
-  "/src/context/GlobalContext.jsx?t=1678588179421",
-  "/src/App.jsx?t=1678588179421",
-  "/src/swDev.js",
-  "/node_modules/.vite/deps/chunk-XGHIUXEH.js?v=9f8cfaf8",
-  "/node_modules/.vite/deps/chunk-BUFZAJGW.js?v=9f8cfaf8",
-  "/node_modules/.vite/deps/chunk-DFKQJ226.js?v=9f8cfaf8",
-  "/node_modules/.vite/deps/chunk-ZOIWZPCO.js?v=9f8cfaf8",
-  "/assets/index-7be0a65b.js",
-  "/assets/index-f4b45e5f.css",
+
+  // "/src/assets/avatar.png",
+  // "/src/pages/Error.jsx",
+  // "/src/index.css?t=1678579457290",
+  // "/src/pages/Dashboard.jsx",
+  // "/src/main.jsx?t=1678588179421",
+  // "/src/context/GlobalContext.jsx?t=1678588179421",
+  // "/src/App.jsx?t=1678588179421",
+  // "/src/swDev.js",
+  // "/assets/index.js",
+  // "/assets/index.css",
 ];
+
 
 // '/' --> the root url
 //first install
