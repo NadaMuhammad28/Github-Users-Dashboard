@@ -1,7 +1,6 @@
 //cache name for static file
-const stiaticCacheName = "site_cache-v1";
+const stiaticCacheName = "site_cache-v3";
 //array of static files
-
 
 const assets = [
   "/",
@@ -25,7 +24,6 @@ const assets = [
   "/assets/index.css",
 ];
 
-
 // '/' --> the root url
 //first install
 self.addEventListener("install", (ev) => {
@@ -48,13 +46,12 @@ self.addEventListener("activate", (ev) => {
     //promise.all-> arry of promises , returns a ptomise when all promises are resolved
     //return array of cache keys
     caches.keys().then((keys) => {
-       return Promise.all(
+      return Promise.all(
         keys
           .filter((key) => key !== stiaticCacheName)
           .map((key) => caches.delete(key))
-          );
-//           return window.location.reload()
-      
+      );
+      //           return window.location.reload()
     })
   );
 });
@@ -64,15 +61,11 @@ self.addEventListener("fetch", (ev) => {
 
   ev.respondWith(
     caches.match(ev.request).then((resp) => {
-      if(!navigator.onLine){
-
+      if (!navigator.onLine) {
         if (resp) return resp;
-      }
-      else {
+      } else {
         return fetch(ev.request);
       }
     })
   );
-});
-
 });
