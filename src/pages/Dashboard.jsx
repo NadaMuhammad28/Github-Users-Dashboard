@@ -5,13 +5,14 @@ import Loader from "../components/Loader";
 import UserStatistics from "./UserStatistics";
 import RateLimit from "../components/RateLimitBar";
 import OfflineMode from "../components/OfflineMode";
+import Hero from "../components/welcomeHero";
 
 const Dashboard = () => {
-  const { isLoading } = useGlobalContext();
+  const { isLoading, isOffline, authUser } = useGlobalContext();
   return (
     <Main>
-            {!navigator.onLine && <OfflineMode />}
-
+      {isOffline && <OfflineMode />}
+      {authUser && <Hero />}
       <Search />
       <RateLimit />
       {isLoading ? <Loader /> : <UserStatistics />}

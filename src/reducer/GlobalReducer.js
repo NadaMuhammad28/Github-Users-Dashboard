@@ -94,6 +94,15 @@ export const reducer = (state, action) => {
       };
     }
 
+    case "CHECK_BROWSER_NETWORK": {
+      if (navigator.onLine) {
+        return { ...state, isOffline: false };
+      }
+      return { ...state, isOffline: true };
+    }
+    // case "GUEST_MODE": {
+    //   return { ...state, guestMode: true };
+    // }
     default:
       return state;
   }

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useReducer, useState } from "react";
 import { reducer } from "../reducer/GlobalReducer";
 import axios from "axios";
+import { useNavigate } from "react-router";
 
 //context
 const dataContext = React.createContext();
@@ -19,11 +20,13 @@ const GlobalContext = ({ children }) => {
     isSearchDisabled: false,
     limit: 60,
     usedReqs: JSON.parse(localStorage.getItem("usedReqs")) || 0,
+    isOffline: false,
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
   const [searchedUser, setSearchedUser] = useState("");
-
+  const [authUser, setAuthUSer] = useState(null);
+  const navigate = useNavigate();
   const checkRequest = async () => {
     try {
       const { data } = await axios.get(`${rootEndPoint}rate_limit`);
@@ -33,8 +36,40 @@ const GlobalContext = ({ children }) => {
       if (!remaining) dispatch({ type: "DISABLE_SEARCH" });
     } catch (e) {}
   };
-  useEffect(() => checkRequest, []);
 
+  useEffect(() => {
+    if (window.location) {
+      console.log(window.location);
+      navigate("/", { replace: true });
+    }
+    // console.log("from context", user);
+    checkRequest();
+  }, []);
+
+  useEffect(() => {
+    if (authUser) {
+      console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
+      fetchData(authUser);
+    }
+  }, [authUser]);
+  useEffect(() => {
+    window.addEventListener("online", () => {
+      dispatch({ type: "CHECK_BROWSER_NETWORK" });
+    });
+    window.addEventListener("offline", () => {
+      dispatch({ type: "CHECK_BROWSER_NETWORK" });
+    });
+
+    return () => {
+      window.removeEventListener("online", () => {
+        dispatch({ type: "CHECK_BROWSER_NETWORK" });
+      });
+
+      window.removeEventListener("offline", () => {
+        dispatch({ type: "CHECK_BROWSER_NETWORK" });
+      });
+    };
+  }, [navigator.onLine]);
   const fetchUser = async (user) => {
     try {
       const dat = await axios.get(`${rootEndPoint}users/${user}`);
@@ -109,7 +144,14 @@ const GlobalContext = ({ children }) => {
 
   return (
     <dataContext.Provider
-      value={{ ...state, setSearchedUser, searchedUser, handleSubmit }}
+      value={{
+        ...state,
+        setSearchedUser,
+        searchedUser,
+        handleSubmit,
+        setAuthUSer,
+        authUser,
+      }}
     >
       {children}
     </dataContext.Provider>
