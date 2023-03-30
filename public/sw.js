@@ -1,5 +1,5 @@
 //cache name for static file
-const staticCacheName = "site_cache-v6";
+const staticCacheName = "site_cache-v7";
 const DynamicCacheName = "dynamic_cache_v4";
 //array of static files
 
@@ -12,11 +12,10 @@ const assets = [
   "https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2",
   "https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap",
   "https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2",
-  "/hero-bg.webp",
 
   //for production
-  // "/assets/index.js",
-  // "/assets/index.css",
+  "/assets/index.js",
+  "/assets/index.css",
 ];
 
 // '/' --> the root url

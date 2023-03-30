@@ -39,7 +39,7 @@ const GlobalContext = ({ children }) => {
 
   useEffect(() => {
     if (window.location) {
-      console.log(window.location);
+      // console.log(window.location);
       navigate("/", { replace: true });
     }
     // console.log("from context", user);
@@ -48,7 +48,7 @@ const GlobalContext = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
+      // console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
       fetchData(authUser);
     }
   }, [authUser]);
