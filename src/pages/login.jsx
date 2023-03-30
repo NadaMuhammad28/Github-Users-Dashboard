@@ -37,7 +37,7 @@ const Login = () => {
 
 const Wrapper = styled("main")`
   min-height: 100vh;
-  background: url("/public/hero-bg.webp");
+  background: url(/hero-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
