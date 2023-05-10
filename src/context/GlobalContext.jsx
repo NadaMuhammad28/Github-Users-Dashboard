@@ -20,7 +20,7 @@ const GlobalContext = ({ children }) => {
     isSearchDisabled: false,
     limit: 60,
     usedReqs: JSON.parse(localStorage.getItem("usedReqs")) || 0,
-    isOffline: false,
+    isOffline:  !navigator.onLine,
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
