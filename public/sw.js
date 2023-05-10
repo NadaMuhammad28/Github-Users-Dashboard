@@ -44,8 +44,6 @@ self.addEventListener("install", async (ev) => {
   } catch (e) {
     console.log(e);
   }
-
-  ev.waitUntil(Promise.resolve());
 });
 /////////////////////////////////////////////////////////////////////////////////////////////
 self.addEventListener("activate", (ev) => {
