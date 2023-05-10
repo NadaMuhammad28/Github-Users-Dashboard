@@ -1,6 +1,6 @@
 //cache name for static file
-const staticCacheName = "site_cache-v7";
-const DynamicCacheName = "dynamic_cache_v4";
+const staticCacheName = "site_cache-v8";
+const DynamicCacheName = "dynamic_cache_v5";
 //array of static files
 
 const assets = [
